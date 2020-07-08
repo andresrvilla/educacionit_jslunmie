@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3, 4 y 5</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 3
+        var nombre = prompt("Ingrese el nombre del usuario");
+        var apellido = prompt("Ingrese el apellido del usuario");
+        var edad = prompt("Ingrese la edad del usuario");
+
+        alert("El nombre del usuario es "+nombre + " " + apellido);
+        alert("La edad del usuario es "+edad);
+        //Ejercicio 4
+        document.write("El nombre del usuario es "+nombre + " " + apellido+"<br>");
+        document.write("La edad del usuario es "+edad+"<br>");
+
+        //Ejercicio 5
+        var sueldo = prompt("Cual es tu sueldo? (Número Decimal)");
+        var bonus = prompt("Cuanto fue tu bonus de este mes? (Número Decimal)");
+        var sueldoNumero = parseFloat(sueldo);        
+        var bonusNumero = parseFloat(bonus);
+        var resultado = sueldoNumero + bonusNumero;
+        document.write("El resultado final de tu sueldo es "+resultado);
+    </script>
+</body>
+</html>
