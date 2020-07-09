@@ -18,10 +18,10 @@ En este curso será necesario contar con el navegador que prefieran (Chrome, Edg
 Este plugin añade caracteristicas a los editores que mejoran la experiencia de programar desarrollo web. En el caso de Visual Studio Code no es necesario instalarlo ya que viene por defecto.
 
 [JQuery](https://jquery.com/ "JQuery")  
-La libreria JQuery se utiliza en la clase 5
+La libreria JQuery se utiliza en la clase 6 y 7
 
 [Plugin LightBox](https://www.lokeshdhakar.com/projects/lightbox2/ "Plugin LightBox")  
-El plugin Lightbox de JQuery se utiliza en la clase 5
+El plugin Lightbox de JQuery se utiliza en la clase 7
 
 ### Otros vínculos
 [Educacion IT](http://www.educacionit.com "Educacion IT")  
