@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ingresaNombre = confirm("¿Desea ingresar su nombre?");
+
+        /*
+        Operadores de comparacion
+        
+        == "igualdad de comparacion". Ojo no confundirse con el operador de asignacion =
+        != distinto
+        > mayor
+        < menor
+        >= mayor o igual
+        <= menor o igual
+        */
+        
+        if (ingresaNombre == true) {
+            var nombre = prompt("Ingrese su nombre");
+            document.write("Hola "+nombre);
+
+            var edadTexto = prompt("Ingrese su edad");
+            var edad = parseInt(edadTexto);
+            if(edad >= 18){
+                document.write("Usted puede participar del concurso");
+            }else{
+                document.write("Usted no uede participar del concurso");
+            }
+            
+        } else {
+            document.write("Hola usuario anonimo");
+        }
+
+
+    </script>
+</body>
+</html>

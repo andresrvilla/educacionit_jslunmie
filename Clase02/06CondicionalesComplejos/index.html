@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Operadores de comparacion
+
+        == "igualdad de comparacion". Ojo no confundirse con el operador de asignacion =
+        != distinto
+        > mayor
+        < menor
+        >= mayor o igual
+        <= menor o igual
+        */
+
+        var nombre = prompt("Ingrese su nombre");
+        var edadTexto = prompt("Ingrese su edad");
+        var edad = parseInt(edadTexto);
+
+        /*
+        Si se llama "admin" y la edad es "0", informo "Bienvenido administrador"
+        Si la edad es menor a 18, informo "Acceso denegado"
+        Si la edad es mayor o igual a 18, informo "Bienvenido "+nombre
+        */
+
+        /*
+        Operadores logicos: Unen varias condiciones
+        && "y logico"
+        || "o logico"
+        ! "Negacion"
+        */
+
+        if (nombre == "admin" && edad == 0){
+            document.write("Bienvenido administrador");
+        } else if(edad < 18) {
+            document.write("Acceso denegado");
+        } else {
+            document.write("Bienvenido "+nombre);
+        }
+
+    </script>
+</body>
+</html>

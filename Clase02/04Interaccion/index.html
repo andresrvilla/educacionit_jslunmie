@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre = prompt("Ingrese su nombre");
+        document.write("Hola "+nombre+"<br>");
+
+        var numeroUnoTexto = prompt("Ingrese el numero uno");
+        // Uso parseInt en el caso de que el ingreso deba ser un numero entero
+        // Uso parseFloat en el caso de que el ingreso deba ser un numero decimal
+        var numeroUno = parseInt(numeroUnoTexto);
+        var numeroDosTexto = prompt("Ingrese el numero dos");
+        var numeroDos = parseInt(numeroDosTexto);
+        var resultadoSuma = numeroUno + numeroDos;
+        document.write("El resultado de la suma es "+resultadoSuma+"<br>");
+
+        var interaccionBooleana = confirm("¿Desea terminar el programa?");
+        alert(interaccionBooleana);
+    </script>
+</body>
+</html>
