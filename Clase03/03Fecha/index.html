@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Hay partes de la fecha en UTC, que quiere decir que descarta la zona horaria
+        var ahora = new Date();
+        document.write(ahora +"<br>");
+        var diaDelMes = ahora.getDate();
+        document.write("Dia del mes: "+diaDelMes+"<br>");
+        var diaDeLaSemana = ahora.getDay();
+        document.write("Dia de la semana: "+diaDeLaSemana+"<br>");
+        var mes = ahora.getMonth() + 1;
+        document.write("Mes: "+mes+"<br>");
+        var anio = ahora.getFullYear();
+        document.write("Año: "+anio+"<br>");
+        var hora = ahora.getHours();
+        document.write("Hora: "+hora+"<br>");
+        var minutos = ahora.getMinutes();
+        document.write("Minutos: "+minutos+"<br>");
+        var segundos = ahora.getSeconds();
+        document.write("Segundos: "+segundos+"<br>");
+
+        document.write(diaDelMes+"/"+mes+"/"+anio+" "+hora+":"+minutos);
+    </script>
+</body>
+</html>

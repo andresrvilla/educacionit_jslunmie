@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Cotizador de seguro de autos
+            2010: 1000
+            2011: 1100
+            2012: 1300
+            2013: 1600
+            2014: 1750
+            2015: 2000
+            2016: 2500
+            2017: 3000
+            2018: 3800
+            2019: 4500
+            2020: 4500
+        */
+
+        var datoAutoTexto = prompt("Ingrese el año de su auto:");
+        var datoAuto = parseInt(datoAutoTexto);
+        switch(datoAuto){ //"if" datoAuto == 
+            case 2010:    // 2010
+                document.write("Usted deberá pagar $1000");
+                break; //termina el bloque que se ejecuta cuando datoAuto es 2010
+            case 2011:
+                document.write("Usted deberá pagar $1100");
+                break;
+            case 2012:
+                document.write("Usted deberá pagar $1300");
+                break;
+            case 2013:
+                document.write("Usted deberá pagar $1600");
+                break;
+            case 2014:
+                document.write("Usted deberá pagar $1750");
+                break;
+            case 2015:
+                document.write("Usted deberá pagar $2000");
+                break;
+            case 2016:
+                document.write("Usted deberá pagar $2500");
+                break;
+            case 2017:
+                document.write("Usted deberá pagar $3000");
+                break;
+            case 2018:
+                document.write("Usted deberá pagar $3800");
+                break;
+            case 2019:
+            case 2020:
+                document.write("Usted deberá pagar $4500");
+                break;
+            default:
+                document.write("No podemos asegurar su auto");
+                break;
+        }
+    </script>
+</body>
+</html>

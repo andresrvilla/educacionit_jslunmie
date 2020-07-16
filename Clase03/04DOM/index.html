@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM</title>
+</head>
+<body>
+    <div>
+        <p>
+            Hola, <b id="textoBienvenida"> </b> a mi página web.
+            <img src="..." >
+        </p>
+    </div>
+    <script>
+        var elementoBienvenida = document.getElementById("textoBienvenida");
+        elementoBienvenida.innerText = "amigos bienvenidos";
+    </script>
+</body>
+</html>
