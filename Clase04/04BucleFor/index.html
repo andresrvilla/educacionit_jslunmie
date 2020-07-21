@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        for(A;B;C){
+
+        }
+        A: Inicializacion de la variable de control
+        B: Condicion de continuidad del bucle. (Es decir que si la condicion da true, sigue ejecutandose el bucle)
+        C: Cambio de la variable de control
+        */
+        // Bucle de 10 repeticiones
+        for (var i = 0; i < 10; i++) {
+            console.log("For ciclo " + i);
+        }
+
+        // Bucle de 10 repeticiones a la inversa
+        for (var i = 9; i >= 0; i--) {
+            console.log("For inversa ciclo " + i);
+        }
+
+        // Incremento de dos en dos
+        for (var i = 0; i < 10; i = i + 2) {
+            console.log("For dos en dos ciclo " + i);
+        }
+
+        /*for (var i = 0; i < 10; i--) {
+            console.log("For infinito ciclo " + i);
+        }*/
+
+        var numeroElegido = prompt("Ingrese el numero hasta el que sumaremos");
+        var numero = parseInt(numeroElegido);
+        var total = 0;
+        for (var i = 0; i <= numero; i++) {
+            total += i;
+        }
+
+        console.log("La suma de los primeros " + numeroElegido + " numeros es " + total);
+
+        // Dos bucles anidados
+        for (var i = 0; i < 10; i++) {
+            for (var j = 0; j < 10; j++) {
+                console.log("Bucle anidado, i: " + i + " j: " + j);
+            }
+        }
+    </script>
+</body>
+
+</html>

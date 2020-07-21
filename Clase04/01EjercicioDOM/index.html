@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Usted compró <span id="cantidadCombos"></span> 
+    del combo <span id="comboSeleccionado"></span>
+    y debe abonar $ <span id="costoTotal"></span>
+    <script>
+        var valorComboUno = 500;
+        var valorComboDos = 600;
+        var valorComboTres = 750;
+
+        var nombreIngresado = prompt("Hola, voy a tomar su pedido. ¿Me indicaría su nombre?");
+        var comboIngresado = prompt("Por favor indique si quiere comprar el combo 1, 2 o 3");
+        var comboConvertido = parseInt(comboIngresado);
+        var cantidadCombosIngresado = prompt("Por favor indique la cantidad de combos que desea");
+        var cantidadCombosConvertido = parseInt(cantidadCombosIngresado);
+
+        console.log(nombreIngresado);
+        console.log(comboIngresado);
+        console.log(comboConvertido);
+        console.log(cantidadCombosIngresado);
+        console.log(cantidadCombosConvertido)
+        console.log(10 + 2);
+
+        var total=0;
+
+        /*if(comboConvertido == 1){
+            total = valorComboUno * cantidadCombosConvertido;
+        }else if(comboConvertido==2){
+            total = valorComboDos * cantidadCombosConvertido;
+        }else if(comboConvertido == 3){
+            total = valorComboTres * cantidadCombosConvertido;
+        }else{
+            total = "Combo inexistente";
+        }*/
+
+        switch(comboConvertido){
+            case 1:
+                total = valorComboUno * cantidadCombosConvertido;
+                break;
+            case 2:
+                total = valorComboDos * cantidadCombosConvertido;
+                break;
+            case 3:
+                total = valorComboTres * cantidadCombosConvertido;
+                break;
+            default:
+                total = "Combo inexistente";
+                break;
+        }
+        
+
+        var elementoCantidadCombos = document.getElementById("cantidadCombos");
+        elementoCantidadCombos.innerText = cantidadCombosIngresado;
+
+        var elementoComboSeleccionado = document.getElementById("comboSeleccionado");
+        elementoComboSeleccionado.innerText = comboConvertido;
+        
+        var elementoCostoTotal = document.getElementById("costoTotal");
+        elementoCostoTotal.innerHTML = "<strong>" + total +"</strong>";
+
+
+    </script>
+</body>
+</html>

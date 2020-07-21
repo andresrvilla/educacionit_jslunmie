@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Contador: <span id="contador"></span>
+    <script>
+        var contador = 0;
+        var incrementar;
+        
+        do {
+            contador++;
+            incrementar = confirm("¿Desea incrementar el contador?");
+        } while (incrementar == true && contador <= 10)
+
+        var elementoContador = document.getElementById("contador");
+        elementoContador.innerHTML = "<em>"+contador+"</em>";
+    </script>
+</body>
+
+</html>
