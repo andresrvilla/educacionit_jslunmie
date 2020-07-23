@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    El alumno <strong><span id="nombreAlumno"></span></strong>
+    tiene un promedio de <strong><span id="promedioNotas"></span></strong>
+    <script>
+        var alumno = prompt("Por favor ingrese el nombre del alumno");
+        var elementoNombreAlumno = document.getElementById("nombreAlumno");
+        elementoNombreAlumno.innerText = alumno;
+        var continuo = false;
+        var notas = [];
+        do {
+            var notaIngresa = prompt("Por favor ingrese la nota del alumno");
+            var nota = parseFloat(notaIngresa);
+            notas.push(nota);
+            continuo = confirm("¿Desea cargar otra nota?");
+        } while (continuo == true)
+        var sumaTotal = 0;
+        for (var i = 0; i < notas.length; i++) {
+            sumaTotal += notas[i];
+        }
+
+        var elementoPromedio = document.getElementById("promedioNotas");
+        var promedio = sumaTotal / notas.length;
+        elementoPromedio.innerText = promedio;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="alert('Se cargo')">
+    <button onclick="alert('hizo click')">Haceme click!</button><br>
+    <button onclick="MiFuncionClick()">Haceme click!</button><br>
+    <button id="miTercerBoton">Haceme click!</button><br>
+    <button onclick="saludarA('Andres')">Saluda!!!</button><br>
+    <button id="saludarAndres">Andres</button><br>
+    <button id="saludarJose">Jose</button>
+
+    <script>
+        function saludar(){
+            alert("Hola "+this.innerHTML);
+        }
+
+        var elementoBotonSaludarAndres = document.getElementById("saludarAndres");
+        elementoBotonSaludarAndres.onclick = saludar;
+
+        var elementoBotonSaludarJose = document.getElementById("saludarJose");
+        elementoBotonSaludarJose.onclick = saludar;
+
+        function saludarA(nombre){
+            alert("Hola "+nombre);
+        }
+
+        function MiFuncionClick(){
+            alert("Hizo click en la funcion definida en JS");
+        }
+
+        var tercerBoton = document.getElementById("miTercerBoton");
+        tercerBoton.onclick = MiFuncionClick;
+
+    </script>
+</body>
+</html>
