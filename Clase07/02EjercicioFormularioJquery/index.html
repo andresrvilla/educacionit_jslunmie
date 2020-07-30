@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="cuerpo">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" /><br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" id="apellido" /><br>
+    <button id="btnAgregar">Agregar</button>
+    <hr>
+    <span id="color">Color</span>
+    <button id="btnCambiarColorVerde">Verde</button>
+    <button id="btnCambiarColorAzul">Azul</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var personas= [];
+        /*
+        Forma que vimos en la clase 6        
+        function agregarPersona(){
+            // hace lo que tiene que hacer
+        }
+        $("#btnAgregar").click(agregarPersona);
+        */
+
+        // forma habitual para jquery
+        $("#btnAgregar").click(function(){
+            /* Una forma...
+            var nuevaPersona = {
+                nombre: $("#nombre").val(),
+                apellido: $("#apellido").val()
+            };
+            personas.push(nuevaPersona);*/
+            //mas reducido!!!
+            personas.push({
+                nombre: $("#nombre").val(),
+                apellido: $("#apellido").val()
+            });
+
+            $("#nombre").val("");
+            $("#apellido").val("");
+            console.log(personas);
+        });
+
+        function cambieColor(nuevoColor){
+            // varias propiedades en un tag
+            // style="background-color: red; font-size: 10px;..."
+
+            // escribo una propiedad css dentro del style
+            $("#color").css("background-color",nuevoColor);
+            //si quiero leer, hago asi:
+            console.log($("#color").css("background-color"));
+
+        }
+
+        // No se puede hacer asi porque se esta invocando a cambieColor
+        //$("#btnCambiarColorVerde").click(cambieColor("green"));
+
+        $("#btnCambiarColorVerde").click(function(){
+            cambieColor("green");
+        });
+
+        $("#btnCambiarColorAzul").click(function(){
+            cambieColor("blue");
+        })
+
+
+    </script>
+</body>
+</html>

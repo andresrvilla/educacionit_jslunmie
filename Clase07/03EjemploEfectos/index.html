@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="miCuadrito">
+
+    </div>
+    <button id="btnMostrar">Mostrar</button><br>
+    <button id="btnOcultar">Ocultar</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //$(".miCuadrito").css("width","200px");
+        //$(".miCuadrito").css("height","200px");
+        $(".miCuadrito").css({
+            "width": "200px",
+            "height": "200px",
+            "background-color": "red"
+        });
+        $("#btnMostrar").click(function(){
+            $(".miCuadrito").show(100);
+        });
+        $("#btnOcultar").click(function(){
+            $(".miCuadrito").hide(100);
+        });
+    </script>
+</body>
+</html>

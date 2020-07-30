@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="itemContabilidad">Contabilidad</li>
+        <li id="itemAsesoria">Asesoria</li>
+        <li id="itemRecursos">Recursos</li>
+    </ul>
+    <div id="descripcionContabilidad" class="descripciones">
+        Descripcion Contabilidad
+    </div>
+    <div id="descripcionAsesoria" class="descripciones">
+        Descripcion Asesoria
+    </div>
+    <div id="descripcionRecursos" class="descripciones">
+        Descripcion Recursos
+    </div>
+    <div>
+        Otro div
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /*
+        $("#descripcionContabilidad").hide();
+        $("#descripcionAsesoria").hide();
+        $("#descripcionRecursos").hide();
+        */
+        /*
+        $("div.descripciones").hide();
+        */
+        $("#descripcionContabilidad,#descripcionAsesoria,#descripcionRecursos").hide();
+
+        $("#itemContabilidad").mouseover(function(){
+            $("div.descripciones").hide();
+            $("#descripcionContabilidad").show();
+        })
+        $("#itemAsesoria").mouseover(function(){
+            $("div.descripciones").hide();
+            $("#descripcionAsesoria").show();
+        })
+        $("#itemRecursos").mouseover(function(){
+            $("div.descripciones").hide();
+            $("#descripcionRecursos").show();
+        })
+    </script>
+
+</body>
+</html>

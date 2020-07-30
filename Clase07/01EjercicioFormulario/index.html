@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="cuerpo">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" /><br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" id="apellido" /><br>
+    <button onclick="agregar();cambiarColor('red');">Agregar</button>
+    <hr>
+    <span id="color">Color</span>
+    <button onclick="cambiarColor('green')">Verde</button>
+    <script>
+        var personas = [];
+
+        function agregar(){
+            var elementoNombre = document.getElementById("nombre");
+            var elementoApellido = document.getElementById("apellido");
+
+            var nuevaPersona = {
+                "nombre": elementoNombre.value,
+                "apellido": elementoApellido.value
+            };
+            personas.push(nuevaPersona);
+
+            elementoNombre.value="";
+            elementoApellido.value="";
+            
+            console.log(personas);
+        }
+    
+        function cambiarColor(nuevoColor){
+            var spanColor = document.getElementById("color");
+            spanColor.style = "background-color: "+nuevoColor;
+        }
+
+        var cuerpo = document.getElementById("cuerpo");
+        cuerpo.style="background-color: lightblue;";
+    </script>
+</body>
+</html>
